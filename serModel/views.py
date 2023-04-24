@@ -103,8 +103,8 @@ def predict(request):
         if saved_audio2 is not None:
 
             print("Saved audio: " + str(saved_audio2))
-            playsound(saved_audio2)
-            print('playing sound using  playsound')
+            # playsound(saved_audio2)
+            # print('playing sound using  playsound')
 
             X = get_feature(saved_audio2)
             X = np.expand_dims(X, axis=1)  # New shape will be (None, 1, 39)
