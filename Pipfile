@@ -14,6 +14,7 @@ twilio = "*"
 python-dotenv = "*"
 django-rest-knox = "*"
 playsound = "*"
+psycopg = {extras = ["binary"], version = "*"}
 
 [dev-packages]
 
