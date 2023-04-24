@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+tensorflow = "*"
+librosa = "*"
+scikit-learn = "*"
+pandas = "*"
+twilio = "*"
+python-dotenv = "*"
+django-rest-knox = "*"
+playsound = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
