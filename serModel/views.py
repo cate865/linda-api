@@ -13,7 +13,7 @@ from rest_framework import permissions
 from rest_framework.authentication import SessionAuthentication
 from knox.auth import TokenAuthentication
 from rest_framework import status
-from playsound import playsound
+# from playsound import playsound
 
 
 def get_feature(file_path: str, mfcc_len: int = 39, mean_signal_length: int = 100000):
@@ -103,7 +103,7 @@ def predict(request):
         if saved_audio2 is not None:
 
             # print("Saved audio: " + str(saved_audio2))
-            playsound(saved_audio2)
+            # playsound(saved_audio2)
             # print('playing sound using  playsound')
 
             X = get_feature(saved_audio2)
