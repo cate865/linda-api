@@ -13,7 +13,7 @@ from rest_framework import permissions
 from rest_framework.authentication import SessionAuthentication
 from knox.auth import TokenAuthentication
 from rest_framework import status
-# from playsound import playsound
+from playsound import playsound
 
 
 def get_feature(file_path: str, mfcc_len: int = 39, mean_signal_length: int = 100000):
@@ -57,7 +57,7 @@ def send_message(sender_name, sender_no, receivers):
     for receiver in receivers:
         receiver_name = receiver.name
         receiver_no = receiver.phone
-        print('Name: ' + str(receiver_name) + ', Phone: ' + str(receiver_no))
+        # print('Name: ' + str(receiver_name) + ', Phone: ' + str(receiver_no))
         message = client.messages.create(
             body='Hello, ' + str(receiver_name) + '. We have sensed that your friend ' +
             str(sender_name) +
@@ -65,7 +65,7 @@ def send_message(sender_name, sender_no, receivers):
             from_=sender_no,
             to=receiver_no
         )
-        print(message.sid)
+        # print(message.sid)
 
 
 # Create your views here.
@@ -102,8 +102,8 @@ def predict(request):
         # process the file with the machine learning model
         if saved_audio2 is not None:
 
-            print("Saved audio: " + str(saved_audio2))
-            # playsound(saved_audio2)
+            # print("Saved audio: " + str(saved_audio2))
+            playsound(saved_audio2)
             # print('playing sound using  playsound')
 
             X = get_feature(saved_audio2)
